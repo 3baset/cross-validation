@@ -21,3 +21,9 @@ The procedure has a single parameter called k that refers to the number of group
     3. Fit a model on the training set and evaluate it on the test set
 4. Retain the evaluation score and discard the model
 5. Summarize the skill of the model using the sample of model evaluation scores
+
+## Stratified KFold Cross Validation
+![Stratified KFold CV](stratified_k_fold_cv.png)
+Stratified k-fold cross-validation is same as just k-fold cross-validation, But in Stratified k-fold cross-validation, it does stratified sampling instead of random sampling. We use this approach when the dataset is skewed.
+#### Stratified Sampling:
+ split a dataset randomly, although in such a way that maintains the same class distribution in each subset.and the target variable (y), the class, is used to control the sampling process.this will enforce the class distribution in each split of the data to match the distribution in the complete training dataset.
