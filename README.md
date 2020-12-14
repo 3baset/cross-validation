@@ -27,3 +27,6 @@ The procedure has a single parameter called k that refers to the number of group
 Stratified k-fold cross-validation is same as just k-fold cross-validation, But in Stratified k-fold cross-validation, it does stratified sampling instead of random sampling. We use this approach when the dataset is skewed.
 #### Stratified Sampling:
  split a dataset randomly, although in such a way that maintains the same class distribution in each subset.and the target variable (y), the class, is used to control the sampling process.this will enforce the class distribution in each split of the data to match the distribution in the complete training dataset.
+
+## Group Kfolds
+When you have multiple data samples taken from the same subject. For example more than one measurement from the same person. It’s likely that data from the same group will behave similarly and if you will train on one of the measurements and test on the other you will get a good score, but it won’t prove that your model generalizes well. GroupKFold assures that the whole group goes either to the train or to the test set. 
