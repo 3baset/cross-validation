@@ -8,3 +8,16 @@ The validation set which is a hold-out set from the training set i.e. a portion 
 
 The notebook show an example of using this technique on the wine quality data set.
 
+## KFold Cross Validation
+![KFold](k_fold_cv.png)
+The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be split into. As such, the procedure is often called k-fold cross-validation. When a specific value for k is chosen, it may be used in place of k in the reference to the model, such as k=10 becoming 10-fold cross-validation.
+
+### The general procedure is as follows:
+1. Shuffle the dataset randomly.
+2. Split the dataset into k groups
+3. For each unique group:
+    1. Take the group as a hold out or test data set
+    2. Take the remaining groups as a training data set
+    3. Fit a model on the training set and evaluate it on the test set
+4. Retain the evaluation score and discard the model
+5. Summarize the skill of the model using the sample of model evaluation scores
